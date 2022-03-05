@@ -54,6 +54,7 @@ else()
 endif()
 
 target_link_libraries(supertux z SDL2_mixer SDL2_image SDL2)
+target_link_options(supertux PRIVATE -static-libgcc -static-libstdc++)
 if(NOOPENGL)
 	target_compile_definitions(supertux PRIVATE NOOPENGL)
 endif()
